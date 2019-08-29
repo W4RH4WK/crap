@@ -475,6 +475,8 @@ CONFIG(int, width, 1920)
 CONFIG(int, height, 1080)
 CONFIG(double, effectVolume, 1.0)
 CONFIG(double, musicVolume, 0.3)
+
+#undef CONFIG
 ```
 
 ```c
