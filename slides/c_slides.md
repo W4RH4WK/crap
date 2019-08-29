@@ -82,8 +82,8 @@ union literal {
 
 - `enum`s are just `int`s, no additional type checking!
 - Prefer `enum`s over pre-processor defines!
-    - Provides debug symbols
-    - Additional compile-time checks when used with `switch`
+  - Provides debug symbols
+  - Additional compile-time checks when used with `switch`
 - `struct`s are your product types
 - `union`s are your sum types, however you need to keep track of which field is used
 
@@ -222,7 +222,7 @@ switch (pt) {
 - Should be short and sweet, and do only **one** thing
 - The signature should tell the function's purpose
 - Functions need to be declared before they can be used
-    - Definition also declares a function
+  - Definition also declares a function
 
 ---
 
@@ -317,11 +317,11 @@ void fun(int arr[10])
 ## Strings
 
 - String literals (e.g. `"foo"`) are immutable
-    - Typically handled as `const char *`
+  - Typically handled as `const char *`
 - Strings are NULL-terminated!
 - Be careful when using string related functions!
 - Consider using `asprintf` for any kind of string interpolation
-    - Alternative use `snprintf`
+  - Alternative use `snprintf`
 - Always prefer bounds checking functions (e.g. `strncpy`) over their naïve variants (e.g. `strcpy`)
 
 ## Multiple Source Files
@@ -329,8 +329,8 @@ void fun(int arr[10])
 - Header-files define types and declare functions
 - Source-files contain the implementation
 - Prefix internal functions with `static`
-    - Prevents symbol conflicts between translation units
-    - Communicates that the function is an implementation detail
+  - Prevents symbol conflicts between translation units
+  - Communicates that the function is an implementation detail
 
 More about this later…
 
@@ -359,9 +359,9 @@ More about this later…
 
 - Used for dynamic memory allocations
 - Managed by the programmer through standard library functions
-    - `malloc` / `free`
+  - `malloc` / `free`
 - Common source of memory corruption bugs
-    - Use-after-free
+  - Use-after-free
 
 ## Text
 
@@ -371,15 +371,15 @@ More about this later…
 ## Data Segments
 
 - `.rodata`
-    - Contains initialized global / static variables
-    - Read-only
+  - Contains initialized global / static variables
+  - Read-only
 - `.data`
-    - Contains initialized global / static variables
-    - Writable
+  - Contains initialized global / static variables
+  - Writable
 - `.bss`
-    - Contains uninitialized global / static variables
-    - Zero initialized
-    - Writable
+  - Contains uninitialized global / static variables
+  - Zero initialized
+  - Writable
 
 # Resource Management
 
