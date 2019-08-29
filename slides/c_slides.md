@@ -324,6 +324,28 @@ void fun(int arr[10])
   - Alternative use `snprintf`
 - Always prefer bounds checking functions (e.g. `strncpy`) over their naïve variants (e.g. `strcpy`)
 
+## Assertions
+
+```c
+struct expression *expression_binary_op(enumbinary_op op,
+                                        struct expression *lhs,
+                                        struct expression *rhs)
+{
+    assert(lhs);
+    assert(rhs);
+
+    // …
+}
+```
+
+---
+
+- Make good use of `assert`!
+- Commonly used to check pre-conditions
+- Typically disabled in *release* builds
+- No substitution for regular error checking!
+  - Assertions are meant to catch programmer errors
+
 ## Multiple Source Files
 
 - Header-files define types and declare functions
