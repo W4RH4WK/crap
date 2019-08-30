@@ -426,17 +426,15 @@ More about this later in C++…
 ## X-Macros
 
 ```c
-CONFIG_INT(width, 1920)
-CONFIG_INT(height, 1080)
-
-CONFIG_DOUBLE(effectVolume, 1.0)
-CONFIG_DOUBLE(musicVolume, 0.3)
+CONFIG(int, width, 1920)
+CONFIG(int, height, 1080)
+CONFIG(double, effectVolume, 1.0)
+CONFIG(double, musicVolume, 0.3)
 ```
 
 ```c
 struct config {
-    #define CONFIG_INT(_identifier, _default) int _identifier = _default;
-    #define CONFIG_DOUBLE(_identifier, _default) double _identifier = _default;
+    #define CONFIG(_type, _identifier, _default) _type _identifier = _default;
     #include "config.def"
 };
 ```
