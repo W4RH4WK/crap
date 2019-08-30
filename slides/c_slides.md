@@ -497,3 +497,11 @@ struct config {
 - A classic
 - Use `void *` so it can be used with arbitrary types
 - Investigate the concept of *intrusive* linked lists
+
+## Reading Material
+
+- Your favourite C tutorial
+- Read up on common C standard library functions
+- Man-pages
+- SEI CERT C Coding Standard
+- Revisit operating system lecture on libraries
