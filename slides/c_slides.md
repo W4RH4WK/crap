@@ -346,6 +346,43 @@ struct expression *expression_binary_op(enumbinary_op op,
 - No substitution for regular error checking!
   - Assertions are meant to catch programmer errors
 
+## Goto
+
+```c
+for (int i = 0; i < 10; ++i) {
+    for (int j = 0; j < 20; ++j) {
+        if (j == 10) {
+            goto loopexit;
+        }
+        printf("(%d,%d) ", i, j);
+    }
+    printf("\n\n");
+}
+loopexit:
+```
+
+---
+
+```c
+char *buffer = malloc(256);
+
+for (int i = 0; i < numberOfThings; i++) {
+    if (giveMeThing(i, buffer) != OK)
+        goto error;
+    if (processThing(buffer) != OK)
+        goto error;
+    if (dispatchThing(i, buffer) != OK)
+        goto error;
+}
+
+free(buffer);
+return OK;
+
+error:
+free(buffer);
+return OOPS;
+```
+
 ## Multiple Source Files
 
 - Header-files define types and declare functions
