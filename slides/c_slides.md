@@ -155,6 +155,14 @@ struct point p1;
 p1 = (struct point){ .x = 1.2, .y = 2.3 };
 ```
 
+## Short-circuit Evaluation
+
+```c
+if (foo() || bar() || baz()) {
+    // Do something
+}
+```
+
 ## Control-flow Statements
 
 ```c
