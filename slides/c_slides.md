@@ -483,3 +483,17 @@ struct config {
     #include "config.def"
 };
 ```
+
+# Exercises
+
+## Conway's Game of Life
+
+- Focus on a clean and readable implementation
+- Read field size, starting population, and number of iterations from command-line parameters
+- Save each *frame* as PBM image
+
+## Doubly Linked List
+
+- A classic
+- Use `void *` so it can be used with arbitrary types
+- Investigate the concept of *intrusive* linked lists
