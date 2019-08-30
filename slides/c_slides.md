@@ -89,11 +89,11 @@ union literal {
 
 ---
 
-```txt
+```
 enum.c:13:2: warning: enumeration value ‘PHONE_TYPE_HOME’ not handled in switch [-Wswitch]
 ```
 
-```txt
+```
 $ gdb ./enum
 Breakpoint 1, main () at enum.c:13
 13              switch (pt) {
