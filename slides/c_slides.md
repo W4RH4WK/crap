@@ -126,6 +126,35 @@ struct expression {
 };
 ```
 
+## Initialisation
+
+```c
+int truth = 42;
+int *ptr = NULL;
+
+int arr1[] = {1, 2, 3, [10] = 50};
+
+int arr2[][3] = { {1, 2, 3},
+                  {2, 3, 4} };
+
+struct point p1 = {
+    .x = 1.2,
+    .y = 2.3,
+};
+```
+
+- Always initialise variables!
+
+## Compound Literals
+
+```c
+struct point p1;
+
+// …
+
+p1 = (struct point){ .x = 1.2, .y = 2.3 };
+```
+
 ## Control-flow Statements
 
 ```c
