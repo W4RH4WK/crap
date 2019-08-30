@@ -334,6 +334,14 @@ void fun(int arr[10])
 
 More about this later…
 
+## Miscellaneous
+
+- Bitfields
+- Ternary operator
+- `offsetof`
+- `extern`
+- …
+
 # Memory
 
 ## Stack
