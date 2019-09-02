@@ -348,6 +348,7 @@ indent_size = 2
 - Analyse some broken program with GDB
 - Utilise all of the mentioned commands
 - Try out one of the custom GDB configs
+- Try out a GDB front-end (your IDE, DDD, KDbg, …)
 
 ## Setting up a Build System
 

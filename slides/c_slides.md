@@ -82,10 +82,11 @@ union literal {
 
 - `enum`s are just `int`s, no additional type checking!
 - Prefer `enum`s over pre-processor defines!
-  - Provides debug symbols
   - Additional compile-time checks when used with `switch`
+  - Provides debug symbols
 - `struct`s are your product types
-- `union`s are your sum types, however you need to keep track of which field is used
+- `union`s are your sum types
+  - Need to keep track of which field is used
 
 ---
 
@@ -185,15 +186,15 @@ do {
 
 ```c
 for (int i = 0; i < size; i++) {
-  if (i % 2 == 0) {
-      continue;
-  }
+    if (i % 2 == 0) {
+        continue;
+    }
 
-  if (i > 128) {
-      break;
-  }
+    if (i > 128) {
+        break;
+    }
 
-  baz(i);
+    baz(i);
 }
 ```
 
@@ -204,12 +205,12 @@ for (int i = 0; i < size; i++) {
 
 ```c
 switch (pt) {
-    case PHONE_TYPE_WORK:
-        puts("work");
-        break;
-    default:
-        puts("default");
-        break;
+case PHONE_TYPE_WORK:
+    puts("work");
+    break;
+default:
+    puts("default");
+    break;
 }
 ```
 
@@ -235,7 +236,7 @@ int sum(const int *data, int size);
 
 double clamp(double value, double lower, double upper);
 
-double xfb(int a, int b, double pre); // ???
+double xfb(int a, int b, double pre); // 🤔
 ```
 
 ---
@@ -346,7 +347,7 @@ struct expression *expression_binary_op(enumbinary_op op,
 - No substitution for regular error checking!
   - Assertions are meant to catch programmer errors
 
-## Goto
+## `goto`
 
 ```c
 for (int i = 0; i < 10; ++i) {
@@ -538,7 +539,7 @@ CONFIG(double, musicVolume, 0.3)
 #undef CONFIG
 ```
 
-```c
+```c++
 struct config {
     #define CONFIG(_type, _identifier, _default) _type _identifier = _default;
     #include "config.def"
