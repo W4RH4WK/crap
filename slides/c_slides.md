@@ -256,10 +256,6 @@ double xfb(int a, int b, double pre); // 🤔
 
 ## Pointers
 
-![Memory 0](images/memory-0.png)
-
----
-
 ![Memory 1](images/memory-1.png)
 
 ---
@@ -277,6 +273,10 @@ double xfb(int a, int b, double pre); // 🤔
 ---
 
 ![Memory 5](images/memory-5.png)
+
+---
+
+![Memory 6](images/memory-6.png)
 
 ---
 
