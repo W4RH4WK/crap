@@ -345,6 +345,46 @@ Fetch / Pull
 
 ![Mail Patches](images/git_mail_patches.png)
 
+# Miscellaneous
+
+## Aliases
+
+    [alias]
+        c = checkout
+        co = commit
+        d = diff
+        ds = diff --staged
+        l = log --all --graph --oneline --decorate
+        s = status --short --branch
+        ff = merge --ff-only
+        puff = pull --ff-only
+        purr = pull --rebase
+        mnc = merge --no-ff --no-commit
+
+## Custom Diff- / Merge-tools
+
+    [merge "unityyamlmerge"]
+        tool = unityyamlmerge
+        driver = '/mnt/c/Program Files/Unity/Hub/Editor/2018.3.9f1/Editor/Data/Tools/UnityYAMLMerge.exe' merge -p %O %B %A %P
+    [mergetool "unityyamlmerge"]
+        trustExitCode = false
+        cmd = '/mnt/c/Program Files/Unity/Hub/Editor/2018.3.9f1/Editor/Data/Tools/UnityYAMLMerge.exe' merge -p \"$BASE\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
+
+## Using SSH
+
+- Please always use SSH with public / private key
+
+## Storing Large Files
+
+- Git Large File Storage (LFS)
+- Git Annex
+
+## Bash Prompt
+
+![Bash Prompt](images/git_bash_prompt.png)
+
+- Don't overdo it, may slow down your shell
+
 # Exercises
 
 ## Try Git with other People
