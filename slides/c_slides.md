@@ -164,6 +164,14 @@ if (foo() || bar() || baz()) {
 }
 ```
 
+---
+
+```c
+if (pWidget && pWidget->visible) {
+    render(pWidget);
+}
+```
+
 ## Control-flow Statements
 
 ```c
