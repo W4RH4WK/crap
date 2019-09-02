@@ -336,6 +336,17 @@ void fun(int arr[10])
 ## Assertions
 
 ```c
+double clamp(double value, double lower, double upper)
+{
+    assert(lower <= upper);
+
+    // …
+}
+```
+
+---
+
+```c
 struct expression *expression_binary_op(enumbinary_op op,
                                         struct expression *lhs,
                                         struct expression *rhs)
