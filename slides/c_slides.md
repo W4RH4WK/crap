@@ -492,6 +492,20 @@ More about this later in C++…
 #include <stdio.h>
 ```
 
+## Defines
+
+```c
+#define CLAMP(x,low,heigh) (((x) > (high)) ? (high) : (((x) < (low)) ? (low) : (x)))
+```
+
+```c
+#define FOO \
+    do { \
+        do_stuff(); \
+        do_other_stuff(); \
+    } while (0)
+```
+
 ## Header Guards
 
 ```c
