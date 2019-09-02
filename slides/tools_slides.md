@@ -8,7 +8,7 @@
 - Nano
 - Vim / Emacs
 - VSCode / Atom
-- Code-Blocks / Qt Creator / Eclipse / …
+- CLion / Eclipse / Qt Creator / …
 - Visual Studio
 
 ## What's Important
