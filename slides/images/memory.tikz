@@ -1,4 +1,4 @@
-% convert -density 300 -background white -alpha remove memory.pdf memory.png
+﻿% convert -density 300 -background white -alpha remove memory.pdf memory.png
 
 \tikzstyle{var} = [
     draw,
@@ -51,7 +51,7 @@
         \ifthenelse{\frame > 2}{
             \node[var,fit={( 2  ,-3.5) ( 4  ,-4  )}] (ptr1) {};
             \draw[ref] (ptr1.east) parabola (table-5-1.west);
-            \draw[ptr] ($(ptr1.west)+(0.25,0)$) -- ($(i2.west)+(0.25,0)$);
+            \draw[ptr] ($(ptr1.west)+(0.25,0)$) -- ($(i2.south west)+(0.25,0)$);
         }{}
 
         \ifthenelse{\frame > 3}{
@@ -69,7 +69,7 @@
         \ifthenelse{\frame > 5}{
             \node[var,fit={( 1  ,-7  ) ( 3  ,-7.5)}] (ptr4) {};
             \draw[ref] (ptr4.east) parabola (table-8-1.south west);
-            \draw[ptr] ($(ptr4.west)+(0.25,0)$) -- ($(ptr3.west)+(0.25,0)$);
+            \draw[ptr] ($(ptr4.west)+(0.25,0)$) -- ($(ptr3.south west)+(0.25,0)$);
         }{}
     \end{tikzpicture}
 }
