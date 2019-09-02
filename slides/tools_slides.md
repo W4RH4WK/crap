@@ -357,6 +357,11 @@ indent_size = 2
 - Add support for unit tests `make test`
 - *Hint:* Took me 40 lines of code
 
+## Profile Conway's Game of Life
+
+- Given you already did the previous exercise
+- Try out Google Performance Tools + kcachegrind
+
 ## Reading Material
 
 - Some GDB tutorial
