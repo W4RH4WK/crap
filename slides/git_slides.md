@@ -361,6 +361,10 @@ Fetch / Pull
         purr = pull --rebase
         mnc = merge --no-ff --no-commit
 
+## Blame
+
+![Git Blame](images/git_blame.png)
+
 ## Custom Diff- / Merge-tools
 
     [merge "unityyamlmerge"]
