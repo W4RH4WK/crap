@@ -365,5 +365,5 @@ indent_size = 2
 ## Reading Material
 
 - Some GDB tutorial
-- GNU Make Manual
-- Clang-Format documentation
+- [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)
+- [Clang-Format documentation](https://clang.llvm.org/docs/ClangFormat.html)

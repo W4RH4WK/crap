@@ -598,5 +598,5 @@ struct config {
 - Your favourite C tutorial
 - Read up on common C standard library functions
 - Man-pages
-- SEI CERT C Coding Standard
+- [SEI CERT C Coding Standard](https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard)
 - Revisit operating system lecture on libraries

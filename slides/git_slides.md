@@ -400,7 +400,6 @@ Fetch / Pull
 
 ## Reading Material
 
-- Bitbucket / GitHub documentation
-- Git Book
-- Your favourite Git tutorial
-- Man-pages (!)
+- [Bitbucket Git Tutorial](https://www.atlassian.com/git/tutorials)
+- [Git Book](https://git-scm.com/book)
+- Man-pages
