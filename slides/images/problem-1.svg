@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="11cm" height="11cm" viewBox="-2 -2 203 203" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g>
-    <rect style="fill: #d84747" x="0" y="0" width="200" height="200"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="0" y="0" width="200" height="200"/>
-  </g>
+<svg width="400px" height="400px" viewBox="-1 -1 202 202" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style type="text/css">
+    <![CDATA[
+      rect {
+        fill: #d84747;
+        stroke: #000;
+        stroke-width: 2;
+        stroke-cap: square;
+      }
+    ]]>
+  </style>
+  <rect x="0" y="0" width="200" height="200"/>
 </svg>

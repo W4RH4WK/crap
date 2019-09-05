@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="8cm" height="9cm" viewBox="-2 -2 153 166" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="400" viewBox="-1 -1 152 154" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
     <rect style="fill: #d84747" x="0" y="0" width="60" height="50"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="0" y="0" width="60" height="50"/>
@@ -19,9 +19,6 @@
     <ellipse style="fill: #add8e6" cx="124.5" cy="97.2059" rx="24.5" ry="7.20588"/>
     <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="124.5" cy="97.2059" rx="24.5" ry="7.20588"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 149 97.2059 L 149,140.441 C 149,144.421 138.031,147.647 124.5,147.647 C 110.969,147.647 100,144.421 100,140.441 L 100,97.2059"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="124.5" y="159.647">
-      <tspan x="124.5" y="159.647"></tspan>
-    </text>
   </g>
   <g>
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="65.9449" y1="97.3026" x2="94.0428" y2="106.919"/>

@@ -128,7 +128,7 @@ If things get to complicated, adding another layer may help.
 - Think in layers
   - How far am I from the lowest level?
 
-> You aren't gonna need it
+> You aren't gonna need it!
 
 ## Cross Layer Interaction
 
