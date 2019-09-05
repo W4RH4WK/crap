@@ -470,3 +470,40 @@ scripts/run_integration tests
   - Put some reference there
   - Use a suitable scale
   - Consider logarithmic axes
+
+# Debugging
+
+## How to debug
+
+- Investigate the symptoms
+- Use your brain!
+  - Are they expected?
+  - What could cause these symptoms?
+- Formulate hypothesis
+  - Try to **dis-**prove it!
+  - Narrow the scope of it
+  - Immediately test assumptions
+
+## Dealing with Segfaults
+
+- Use your brain!
+  - Disprove hypothesis
+  - Use different configurations (optimisation level)
+- Are there compiler warnings?
+- Does Valgrind show issues?
+- Run in GDB, observe stack trace
+  - Examine local variables / parameters
+  - Investigate other stack frames `up` / `down`
+  - Symptom ≠ cause
+- Investigate lifetime and ownership of related objects
+
+⟶ Bug description
+
+---
+
+- Create a dedicated test
+  - Will fail at the moment
+- Solve the issue
+  - Test should now be successful
+  - Did I break anything?
+- Commit your fix
