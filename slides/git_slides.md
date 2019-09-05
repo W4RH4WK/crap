@@ -345,6 +345,17 @@ Fetch / Pull
 
 ![Mail Patches](images/git_mail_patches.png)
 
+## Commit Message
+
+- Short, descriptive subject (~ 50 characters)
+  - Capitalise
+  - May start with a marker / tag (e.g. `DB:`)
+- Imperative mood (present tense) (e.g. `Add` instead of `Added`)
+- Body describes the reason for the commit
+- Followed by an explanation of the solution
+  - No implementation details, people have the code at hand!
+- Add references to corresponding issues
+
 # Miscellaneous
 
 ## Aliases
@@ -403,3 +414,4 @@ Fetch / Pull
 - [Bitbucket Git Tutorial](https://www.atlassian.com/git/tutorials)
 - [Git Book](https://git-scm.com/book)
 - Man-pages
+- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
