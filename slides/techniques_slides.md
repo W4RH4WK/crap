@@ -83,7 +83,7 @@ Core idea behind *agile* software development.
 
 ---
 
-Stay away from *scrum* and a like, it's probably a big scam.
+Stay away from *scrum* and alike, it's probably a big scam.
 
 ---
 
@@ -417,7 +417,7 @@ make         # builds the project
 
 make test    # runs all unit tests
 
-scripts/run_integration tests
+scripts/run_integration_tests
 ```
 
 ---
@@ -517,3 +517,110 @@ scripts/run_integration tests
   - Test should now be successful
   - Did I break anything?
 - Commit your fix
+
+# Collaborating
+
+## Working in Teams
+
+- Select a *project officer*
+  - A developer not a manager
+  - Someone with authority
+  - Maintains the big picture
+  - Can make decisions
+  - Who's decisions are respected by the team
+
+Imagine an orchestra without its conductor.
+
+---
+
+- Don't be on the offensive (all the time)
+  - Be respectful of other people's code
+  - Ensure your code is working fine and is well tested
+  - Ensure your code is well documented
+  - Put assertions in place (defensive programming)
+
+---
+
+- Propose changes to other people's code via pull-requests
+  - Use scientific reasoning when arguing
+  - Accept their decision either way
+- Consider doing code-reviews
+  - Improves the overall code-quality
+  - You learn a lot from it
+  - The code-base becomes more similar
+
+## Joining a new Team
+
+- Start by doing the tasks no one else wants to do
+  - This way you get accepted more easily by a group
+  - Show that you can pull your weight
+  - Show that you have something meaningful to contribute
+  - Don't step on other people's toes
+
+---
+
+- Understand the big picture
+- Understand the modules
+- Understand their interactions
+- Add **useful** documentation to the code-base
+- Sometimes tasks are marked as *good for beginners*
+  - Pick one up and try to solve it
+  - Ask the corresponding maintainers, but respect their time
+
+---
+
+Stick with people you feel comfortable with.
+
+## Management vs. Developers
+
+- Management
+  - Necessary to some extend
+  - Knows very little about technical stuff
+  - Mostly concerned with business decisions
+- Developers
+  - Good technical knowledge
+  - Wants to build stuff
+
+---
+
+- Managers should not interfere with developer's work
+  - Keep meetings to a minimum and keep groups small
+  - Ensure developers have the resources they need
+- Developers should not replace managers (if present)
+  - Managers typically have more to worry about than you think
+  - Respect manager's decisions
+
+## Hierarchies
+
+- Very similar to abstractions
+  - The higher you go, the more details get lost
+  - Remember, the devil is in the detail!
+- Strive for shallow, hierarchies (2–3 layers often enough)
+
+## Development Teams (Squads)
+
+- Homogeneous vs. heterogenous
+- Task / feature oriented
+- Will touch many components of the code-base over time
+- Work may conflict with other squads'
+
+## Concept of Maintainers
+
+- Associated with specific components (e.g. database)
+- Squads coordinate with the corresponding maintainers
+- Maintainers are regular developers
+
+## Devops
+
+Sounds good, doesn't work.
+
+## Open Source Community
+
+- Welcoming
+- Developers highly occupied
+- Better to submit code than just opening issues
+  - Talk about bigger changes / features beforehand
+- Learn about their workflow before contributing
+- Keep bug descriptions objective and detailed
+- Respect their work and decisions
+- Be thankful for their effort
