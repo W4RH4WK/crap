@@ -382,6 +382,10 @@ main = print $ Person "John" "Doe" 28
 Person {firstName = "John", lastName = "Doe", age = 28}
 ```
 
+## Cognitive Load
+
+Bottom line: keep it to a minimum.
+
 # Testing
 
 ## V-Model
