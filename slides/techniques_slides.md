@@ -79,6 +79,12 @@
 - Solution has shortcomings
 - Resource situation changes
 
+Core idea behind *agile* software development.
+
+---
+
+Stay away from *scrum* and a like, it's probably a big scam.
+
 ---
 
 - Update problem description
