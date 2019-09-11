@@ -79,7 +79,7 @@
 
 # Build System
 
-## Advanced (Build System Generators)
+## Advanced Build System (Generators)
 
 - CMake (covered later)
 - Autotools
@@ -165,7 +165,9 @@ rm -f example example.o other.o
 
 ---
 
-```
+```make
+# …
+
 %.html: %.md
     $(PAN) $(PANFLAGS) $(PANFLAGS_DOC) -o $@ $^
 

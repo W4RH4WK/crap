@@ -18,7 +18,7 @@
 - Statically typed
 - Compiled
 - Low-level
-- No inheritance, no generics, …
+- No garbage collection, no inheritance, no generics, …
 
 # Language
 
@@ -31,13 +31,12 @@ int i2;
 long i3;
 
 unsigned char i4;
-// …
 
 float f0;
 double f1;
 
-int arr1[10];
-int arr2[2][3][4];
+int array1D[10];
+int array3D[2][3][4];
 
 int *ptr;
 void (*fun_ptr)(int);
@@ -118,11 +117,11 @@ struct expression {
         struct literal *literal;
 
         // EXPRESSION_TYPE_BINARY_OP
-        struct binop {
+        struct {
             enum binary_op op;
             struct expression *lhs;
             struct expression *rhs;
-        };
+        } binop;
     };
 };
 ```
@@ -229,9 +228,9 @@ default:
 
 - Your bread 'n' butter in C
 - Should be short and sweet, and do only **one** thing
-- The signature should tell the function's purpose
+- The signature should fully describe the function
 - Functions need to be declared before they can be used
-  - Definition also declares a function
+  - Functions are also declared on definition
 
 ---
 
@@ -252,7 +251,8 @@ double xfb(int a, int b, double pre); // 🤔
 - Functions should touch as little global state as possible
 - Ideally functions should be *pure*
 - Always use `const` if pointers are used for input
-- Pointers are also commonly used for output parameters (no `const`)
+- Pointers are commonly used for output parameters (no `const`)
+  - Alternative: return a struct
 
 ## Pointers
 
@@ -285,13 +285,14 @@ double xfb(int a, int b, double pre); // 🤔
 - Underlying building block for arrays
 - Enable the use of output parameters
 - Enable efficient implementation of algorithms and data structures
+  - Pointer to children vs. adjacency list
 - `NULL` often used to indicate absence or error
 
 ## Arrays
 
-- Multiple values of the same type consecutive in memory
+- Multiple values of the same type, consecutive in memory
 - Need to keep track of the size
-- No bounds checking
+- No automatic bounds checking
 - Commonly used for buffers and strings
 
 ---
@@ -328,9 +329,9 @@ void fun(int arr[10])
 - String literals (e.g. `"foo"`) are immutable
   - Typically handled as `const char *`
 - Strings are NULL-terminated!
-- Be careful when using string related functions!
+  - Be careful when using string related functions!
 - Consider using `asprintf` for any kind of string interpolation
-  - Alternative use `snprintf`
+  - Alternatively use `snprintf`
 - Always prefer bounds checking functions (e.g. `strncpy`) over their naïve variants (e.g. `strcpy`)
 
 ## Assertions
@@ -406,12 +407,12 @@ return OOPS;
 ## Multiple Source Files
 
 - Header-files define types and declare functions
+  - Contain most of the documentation
+  - Serve as interfaces
 - Source-files contain the implementation
-- Prefix internal functions with `static`
+- Mark internal functions as `static`
   - Prevents symbol conflicts between translation units
   - Communicates that the function is an implementation detail
-
-More about this later…
 
 ## Miscellaneous
 
@@ -501,7 +502,7 @@ More about this later in C++…
 
 ## Overview
 
-- Essential part of the C language
+- Essential tool when using C
 - Can be used to build obscure mechanisms (black magic)
 - Techniques for minimising code duplication
 

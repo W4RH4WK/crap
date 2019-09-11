@@ -152,9 +152,6 @@ Checkout
 Staging
   ~ Files / changes that are to be committed.
 
-`HEAD`
-  ~ Reference to the last commit in the currently check-out branch.
-
 ## Branches
 
 ![Src: Bitbucket Documentation](images/git_branch.svg)
@@ -254,10 +251,10 @@ Fetch / Pull
 
     $ cd /tmp/foo
 
-    $ git log --graph --oneline
-    * c754a65 (HEAD -> master) Our third commit
-    * 4a3252c Another commit
-    * 90d9457 First commit
+    $ git log --oneline
+    c754a65 (HEAD -> master) Our third commit
+    4a3252c Another commit
+    90d9457 First commit
 
 # Rebase
 
@@ -303,7 +300,7 @@ Fetch / Pull
 ---
 
 - Use dedicated branches for implementing new features
-- Locally rebase feature branch until ready for final merge
+- Rebase feature branch until ready for final merge
 
 ## Release Branches
 

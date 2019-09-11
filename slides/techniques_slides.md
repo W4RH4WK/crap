@@ -59,7 +59,7 @@
 - Needs to communicate the big picture
 - Consider it a guide for implementing
 
-## Manging Time
+## Managing Time
 
 - Split the implementation work into small, manageable tasks
 - Critically think about relation ships between tasks
@@ -219,11 +219,11 @@ int main(void)
     int secret = rand() % 100;
 
     while (true) {
-      int guess1 = get_guess();
-      int guess2 = get_guess();
-      int guess3 = get_guess();
+        int guess1 = get_guess();
+        int guess2 = get_guess();
+        int guess3 = get_guess();
 
-      // …
+        // …
     }
 }
 ```
@@ -291,13 +291,13 @@ Bad
 void foo(void)
 {
     if (!first())
-      return;
+        return;
 
     if (!second())
-      return;
+        return;
 
     if (!third())
-      return;
+        return;
 
     // …
 }
@@ -408,7 +408,7 @@ Consider test driven development (TDD).
 - Use a testing framework
 - Integrate it into the build system
 - Make it easy to write and run tests!
-  - See Go for instance
+  - See Go or Rust for instance
 
 ---
 
@@ -426,7 +426,7 @@ scripts/run_integration_tests
 
 ## Continuous Integration
 
-- Let services (Jenkins, GitLab CI) build and test your code
+- Let services (Jenkins, GitLab CI, …) build and test your code
 - Reject merge-requests which break tests
 - View this as a form of quality assurance
 
@@ -456,6 +456,7 @@ scripts/run_integration_tests
 
 - Not that important right now
 - Always measure!
+  - What to measure, what to optimise?
   - Are the values you measure meaningful?!
   - Related multiple measurements over time
 - Can be applied to multiple layers
@@ -516,14 +517,14 @@ scripts/run_integration_tests
 - Solve the issue
   - Test should now be successful
   - Did I break anything?
-- Commit your fix
+- Commit your fix (+ test)
 
 # Collaborating
 
 ## Working in Teams
 
 - Select a *project officer*
-  - A developer not a manager
+  - A developer, not a manager
   - Someone with authority
   - Maintains the big picture
   - Can make decisions
@@ -537,7 +538,7 @@ Imagine an orchestra without its conductor.
   - Be respectful of other people's code
   - Ensure your code is working fine and is well tested
   - Ensure your code is well documented
-  - Put assertions in place (defensive programming)
+  - Add assertions (defensive programming)
 
 ---
 

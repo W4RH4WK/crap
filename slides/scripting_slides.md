@@ -97,8 +97,8 @@ Don't — it's a mess!
   - Statically typed, but fast compile times
   - Useful standard library, good ecosystem
   - Good performance
-  - No decent package manager (yet)
   - Easier to parallelise
+  - No decent package manager (yet)
 
 ---
 
@@ -320,7 +320,7 @@ Compare this to your average Windows / Mac install experience:
 
 - Learn the basics of Bash scripting
 - Critically think about its limitations
-- criteria to deciding between Shell / scripting language
+- Criteria to deciding when to use Shell / scripting language
 
 ## Using a Package Manager
 
