@@ -330,4 +330,5 @@ Compare this to your average Windows / Mac install experience:
 ## Reading Material
 
 - [Bash Scripting Tutorial for Beginners](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
+- [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible)
 - [Fedora Package Management System](https://fedoraproject.org/wiki/Package_management_system)

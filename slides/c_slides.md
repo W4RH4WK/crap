@@ -597,6 +597,7 @@ struct config {
 ## Reading Material
 
 - Your favourite C tutorial
+- [Modern C](https://modernc.gforge.inria.fr/)
 - Read up on common C standard library functions
 - Man-pages
 - [SEI CERT C Coding Standard](https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard)
