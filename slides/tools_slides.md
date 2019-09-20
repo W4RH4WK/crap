@@ -53,8 +53,8 @@
 
 - Use your IDE
 - `grep` / Silver Searcher / ripgrep
-- Ctags / GNU Global
-- Language servers (cquery)
+- Ctags / GNU Global / rtags
+- Language servers (cquery, Clangd)
 
 ---
 
