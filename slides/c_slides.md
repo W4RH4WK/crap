@@ -58,6 +58,26 @@ typedef void (*visit_expression_cb)(struct expression *, void *userdata);
 const int *cptr;
 ```
 
+---
+
+```c
+bool b1 = 1;
+bool b2 = 2;
+
+if (b1 == b2)
+    puts("equal");
+```
+
+```
+$ ./bool
+equal
+```
+
+```asm
+movb    $1, -9(%ebp)
+movb    $1, -10(%ebp)
+```
+
 ## User-defined Types
 
 ```c
@@ -217,7 +237,6 @@ case PHONE_TYPE_WORK:
     break;
 default:
     puts("default");
-    break;
 }
 ```
 
@@ -519,7 +538,7 @@ More about this later in C++…
 ```
 
 ```c
-#define FOO \
+#define FOO() \
     do { \
         do_stuff(); \
         do_other_stuff(); \
