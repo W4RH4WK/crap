@@ -29,7 +29,7 @@
 
 ## Problem Description
 
-- Document fully describing the problem
+- Document, fully describing the problem
 - Mentions every detail discovered
 - Result of your analysis process
 
@@ -47,14 +47,14 @@
 ---
 
 - Go through each module
-  - Critically think about its tasks
+  - Think critically about its tasks
   - How can it be realised?
   - What problems could emerge?
   - How does data flow through this module?
 
 ## Solution Specification
 
-- Document fully describing the solution
+- Document, fully describing the solution
 - May contain lots of details
 - Needs to communicate the big picture
 - Consider it a guide for implementing
@@ -62,7 +62,7 @@
 ## Managing Time
 
 - Split the implementation work into small, manageable tasks
-- Critically think about relation ships between tasks
+- Think critically about relationships between tasks
   - Does feature A depend on feature B?
 - Consider which resources are needed for each task
   - Do we need special equipment?
@@ -89,7 +89,7 @@ Stay away from *scrum* and alike, it's probably a big scam.
 
 - Update problem description
 - Make changes to your solution specification
-- Update your management plane accordingly
+- Update your management plan accordingly
 - Flexibility is paramount
 
 This commonly decides between success and failure.
@@ -174,7 +174,7 @@ double xfb(int a, int b, double pre); // 🤔
 
 - Which global state does the function touch?
 - Observe the call-graph
-  - Which parts of the program calls this function?
+  - Which parts of the program call this function?
   - Which functions are called by this function?
 - Which layer of abstraction are we on?
 
@@ -307,8 +307,8 @@ Good
 
 ## Comments
 
-- Comments should tell **why** something is happening
-- Code should tell **what** is happening
+- Comments should explain **why** something is happening
+- Code should specify **what** is happening
 - Do not introduce comments where none are necessary
 - Consider overview comments at the beginning of files
   - Keep them free of implementation details
@@ -358,11 +358,11 @@ Good
 
 - Put together what belongs together (data and functions)
   - Adhere to separation of concerns
-- Cleary communicate invariants
+- Clearly communicate invariants
 - Interfaces much bigger than your regular functions
   - Make sure this trade-off is worth it!
   - Limit the number of public methods (and variables)
-- Critically think about the lifetime (and ownership) of instances
+- Think critically about the lifetime (and ownership) of instances
 - Try to minimize mutability of held data
 - Auto-generate getters / equality / hash / … **at compile-time**
 
@@ -458,7 +458,7 @@ scripts/run_integration_tests
 - Always measure!
   - What to measure, what to optimise?
   - Are the values you measure meaningful?!
-  - Related multiple measurements over time
+  - Relate multiple measurements over time
 - Can be applied to multiple layers
   - Micro-benchmarks (similar to unit tests)
   - Overall benchmark

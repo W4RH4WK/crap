@@ -9,7 +9,7 @@
 - Distributed
 - High performance (Linux Kernel)
 - Very flexible
-- Complicated command-line interface
+- Complicated (but powerful) command-line interface
 - Scriptable
 
 ## Distributed

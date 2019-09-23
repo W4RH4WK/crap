@@ -384,7 +384,7 @@ struct expression *expression_binary_op(enumbinary_op op,
 - Commonly used to check pre-conditions
 - Typically disabled in *release* builds
 - No substitution for regular error checking!
-  - Assertions are meant to catch programmer errors
+  - Assertions are meant to catch programming errors
 
 ## `goto`
 
@@ -504,7 +504,7 @@ pthread_mutex_unlock(&mutex);
 
 ## Lifetime
 
-- Critical think about when resources are acquired and released
+- Think critically about when resources are acquired and released
 - Clearly defined lifetime lessens the likelihood of bugs
 - Core principle of software architecture
 
@@ -534,7 +534,7 @@ More about this later in C++…
 ## Defines
 
 ```c
-#define CLAMP(x,low,heigh) (((x) > (high)) ? (high) : (((x) < (low)) ? (low) : (x)))
+#define CLAMP(x,low,high) (((x) > (high)) ? (high) : (((x) < (low)) ? (low) : (x)))
 ```
 
 ```c
@@ -545,7 +545,7 @@ More about this later in C++…
     } while (0)
 ```
 
-## Header Guards
+## Include Guards
 
 ```c
 #ifndef SOME_HEADER_H

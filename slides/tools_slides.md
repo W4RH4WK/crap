@@ -14,7 +14,7 @@
 ## What's Important
 
 - Being productive
-  - Autocompletion
+  - Auto-completion
   - Go to definition
   - Debugger integration
 - Ergonomics
@@ -70,7 +70,7 @@
   - Suppress them in special cases
 - Debug vs. release build:
   - Optimisations disabled / enabled
-  - Assertions enabled / disable
+  - Assertions enabled / disabled
   - Debug symbols enabled / disabled
 
 ## Phases
@@ -89,7 +89,7 @@
 
 ## Make
 
-- Often used as back-end by build systems generators
+- Often used as back-end by build system generators
 - Can be used for various different tasks / languages
 - Suitable for small projects consisting of a few source files
 - Checks timestamps for outdated targets
@@ -251,7 +251,7 @@ buf[256] = 42;
 - Can be used from the command-line
 - Feature rich
 - Scriptable (Python API)
-- Go to tool for reverse engineering and binary exploitation
+- Go-to tool for reverse engineering and binary exploitation
 
 ## Basic Commands
 

@@ -3,7 +3,7 @@
 
 # Scripting Language
 
-## I already know Java!
+## Don't need that, I already know Java!
 
 - Using the right tool for the right job
 - Productivity
@@ -45,7 +45,7 @@ Who is right?
 ## Limitations
 
 - Dynamic typing
-  - Easily to develop / prototype
+  - Easy to develop / prototype
   - Hard to maintain / refactor
   - Typically requires lots of tests (see average Ruby library)
 - Performance
@@ -84,7 +84,7 @@ Okay, which one?
 ## Meet Ruby
 
 - Smaller footprint than Python
-- More features on the language side (e.g. RegEx)
+- More language-level features (e.g. RegEx)
 - Third-party packages typically feature good test coverage
 
 ## Meet JavaScript
@@ -320,7 +320,7 @@ Compare this to your average Windows / Mac install experience:
 
 - Learn the basics of Bash scripting
 - Critically think about its limitations
-- Criteria to deciding when to use Shell / scripting language
+- Think about the criteria for deciding when to use Shell / scripting language
 
 ## Using a Package Manager
 
