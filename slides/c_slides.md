@@ -404,23 +404,25 @@ loopexit:
 ---
 
 ```c
-char *buffer = malloc(256);
+bool do_something(void)
+{
+    bool result = false;
 
-for (int i = 0; i < numberOfThings; i++) {
-    if (giveMeThing(i, buffer) != OK)
-        goto error;
-    if (processThing(buffer) != OK)
-        goto error;
-    if (dispatchThing(i, buffer) != OK)
-        goto error;
+    ResourceA resource_a;
+    if (!acquire_resource_a(resource_a)) goto error1;
+    ResourceB resource_b;
+    if (!acquire_resource_b(resource_b)) goto error2;
+    ResourceC resource_c;
+    if (!acquire_resource_c(resource_c)) goto error3;
+
+    result = do_something_with_resources(resource_a, resource_b, resource_c);
+
+    error3: release_resource_c(resource_c); // only allowed if acquired
+    error2: release_resource_b(resource_b);
+    error1: release_resource_a(resource_a);
+
+    return result;
 }
-
-free(buffer);
-return OK;
-
-error:
-free(buffer);
-return OOPS;
 ```
 
 ## Multiple Source Files
