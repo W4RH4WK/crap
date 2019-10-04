@@ -18,6 +18,8 @@
   - Go to definition
   - Debugger integration
 - Ergonomics
+  - Snippets
+    - `ms` ⟶ `std::make_shared<T>(args)`
   - Multi-cursor
   - Forward / backward like in your browser
   - Quickly switch between header / source file
