@@ -55,8 +55,8 @@
 ## Solution Specification
 
 - Document, fully describing the solution
-- May contain lots of details
 - Needs to communicate the big picture
+- May contain lots of details
 - Consider it a guide for implementing
 
 ## Managing Time
@@ -68,6 +68,7 @@
   - Do we need special equipment?
   - Who will work on this?
 - *Maybe* add time estimates to tasks
+  - Avoid unless you really have to
 
 ## Gantt Chart
 
@@ -83,16 +84,16 @@ Core idea behind *agile* software development.
 
 ---
 
-Stay away from *scrum* and alike, it's probably a big scam.
-
----
-
 - Update problem description
 - Make changes to your solution specification
 - Update your management plan accordingly
 - Flexibility is paramount
 
 This commonly decides between success and failure.
+
+---
+
+Stay away from *scrum* and alike, it's probably a big scam.
 
 # Software Architecture
 
@@ -107,7 +108,7 @@ This commonly decides between success and failure.
 
 ## Interfaces
 
-- Multiple components need to work together
+- Multiple modules need to work together
 - Smaller interfaces provide more flexibility
   - *Loose coupling*
 - Need to be clearly defined
@@ -115,7 +116,7 @@ This commonly decides between success and failure.
 
 ## Abstractions
 
-If things get to complicated, adding another layer may help.
+If things get too complicated, adding another layer may help.
 
 ---
 
@@ -274,7 +275,9 @@ Use additional functions (or macros) if things get too complex.
 void foo(void)
 {
     if (first()) {
+        // …
         if (second()) {
+            // …
             if (third()) {
                 // …
             }
@@ -293,8 +296,12 @@ void foo(void)
     if (!first())
         return;
 
+    // …
+
     if (!second())
         return;
+
+    // …
 
     if (!third())
         return;
@@ -602,12 +609,12 @@ Stick with people you feel comfortable with.
 
 - Homogeneous vs. heterogenous
 - Task / feature oriented
-- Will touch many components of the code-base over time
+- Will touch many modules of the code-base over time
 - Work may conflict with other squads'
 
 ## Concept of Maintainers
 
-- Associated with specific components (e.g. database)
+- Associated with specific modules (e.g. database)
 - Squads coordinate with the corresponding maintainers
 - Maintainers are regular developers
 
