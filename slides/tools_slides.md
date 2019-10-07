@@ -5,9 +5,9 @@
 
 ## Lots of Options
 
-- Nano
+- Nano / Notepad
 - Vim / Emacs
-- VSCode / Atom
+- VSCode / Atom / Sublime Text / …
 - CLion / Eclipse / Qt Creator / …
 - Visual Studio
 
@@ -38,14 +38,14 @@
 
 ## 80% / 19% / 1%
 
-- 80% (Visual Studio)
+- 80% (e.g. Visual Studio)
   - Prefer ergonomics
   - Optimise your workflow
-- 19% (VSCode)
+- 19% (e.g. VSCode)
   - Cover multiple languages
   - Good out-of-the-box experience
   - Use something that's mainstream
-- 1% (Vim)
+- 1% (e.g. Vim)
   - Feature rich
   - Macro support
   - Can be scripted
@@ -81,24 +81,32 @@
 
 # Build System
 
-## Advanced Build System (Generators)
+## Advanced Build System
 
-- CMake (covered later)
+- CMake (industry standard for C++)
 - Autotools
 - SCons
 - Meson
 - MSBuild
+- …
 
 ## Make
 
-- Often used as back-end by build system generators
+- Comparatively simple
 - Can be used for various different tasks / languages
 - Suitable for small projects consisting of a few source files
 - Checks timestamps for outdated targets
-- Tab required for indentation
-- First target is built by default (typically called `all`)
+- Convention: first target is built by default (typically called `all`)
+- Pitfall: tab required for indentation
 
 ---
+
+```
+<target>: <dependencies>
+    <command>
+    <command>
+    …
+```
 
 ```make
 example: example.c other.c
@@ -107,12 +115,17 @@ example: example.c other.c
 
 ---
 
+Using *special variables* `$@` and `$^` to prevent duplication and allow for patterns.
+
 ```make
 example: example.c other.c
     gcc -Wall -Wextra -o $@ $^
 ```
 
 ---
+
+- Use conventional variables (`CC`, `CFLAGS`, …)
+- These variables are often initialized by Make
 
 ```make
 CFLAGS = -Wall -Wextra
@@ -122,6 +135,43 @@ example: example.c other.c
 ```
 
 ---
+
+- Utilize Make's implicit rules
+  - Pattern matching on target and dependencies
+
+```make
+CFLAGS = -Wall -Wextra
+
+example: example.c other.c
+```
+
+```
+$ make
+cc -Wall -Wextra    example.c other.c   -o example
+```
+
+---
+
+- Use object files
+  - Intermediate files, speeds up rebuilding
+
+```make
+CFLAGS = -Wall -Wextra
+
+example: example.o other.o
+```
+
+```
+$ make
+cc -Wall -Wextra   -c -o example.o example.c    # compilation of example
+cc -Wall -Wextra   -c -o other.o other.c        # compilation of other
+cc   example.o other.o   -o example             # linking
+```
+
+---
+
+- First (default) target should be `all`
+- `clean` target should be present
 
 ```make
 CFLAGS = -Wall -Wextra
@@ -135,8 +185,10 @@ example: example.c other.c
 ```
 
 ```
-$ make
-cc -Wall -Wextra    example.c other.c   -o example
+$ make all
+cc -Wall -Wextra   -c -o example.o example.c
+cc -Wall -Wextra   -c -o other.o other.c
+cc   example.o other.o   -o example
 
 $ make clean
 rm -f example
@@ -144,28 +196,7 @@ rm -f example
 
 ---
 
-```make
-CFLAGS = -Wall -Wextra
-
-all: example
-
-clean:
-    $(RM) example example.o example.o
-
-example: example.o other.o
-```
-
-```
-$ make
-cc -Wall -Wextra   -c -o example.o example.c
-cc -Wall -Wextra   -c -o other.o other.c
-cc   example.o other.o   -o example
-
-$ make clean
-rm -f example example.o other.o
-```
-
----
+Pattern matching example:
 
 ```make
 # …
@@ -183,13 +214,10 @@ rm -f example example.o other.o
 ---
 
 - Utilise implicit rules and patterns
-- Note `LDFLAGS` and `LDLIBS`
-- Mark non-file rules with `.PHONY`
-
-```make
-SRC  = $(wildcard *.md)
-HTML = $(SRC:.md=.html)
-```
+- `LDFLAGS` and `LDLIBS` are used for linking
+- Mark non-file targets with `.PHONY`
+- Dependencies on header files need to be stated manually
+  - More advanced mechanism using compiler + `include` is available
 
 # Checking
 
@@ -201,8 +229,11 @@ HTML = $(SRC:.md=.html)
 
 ## Runtime Analyser
 
-- Valgrind
-- Dr. Memory
+- Valgrind / Dr. Memory
+- Sanitisers
+
+Don't forget about tracers:
+
 - strace / ltrace
 
 ---
@@ -288,6 +319,14 @@ buf[256] = 42;
 ---
 
 ![Debug Hover Info](images/hover_info_dbg.png)
+
+---
+
+- OllyDbg (old)
+- x64dbg
+- IDA
+
+Very powerful tools, commonly used in Windows environments when source code is not available.
 
 # Formatting
 
