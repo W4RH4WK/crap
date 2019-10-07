@@ -103,14 +103,14 @@
 
 ```
 <target>: <dependencies>
-    <command>
-    <command>
-    …
+	<command>
+	<command>
+	…
 ```
 
 ```make
 example: example.c other.c
-    gcc -Wall -Wextra -o example example.c other.c
+	gcc -Wall -Wextra -o example example.c other.c
 ```
 
 ---
@@ -119,7 +119,7 @@ Using *special variables* `$@` and `$^` to prevent duplication and allow for pat
 
 ```make
 example: example.c other.c
-    gcc -Wall -Wextra -o $@ $^
+	gcc -Wall -Wextra -o $@ $^
 ```
 
 ---
@@ -131,7 +131,7 @@ example: example.c other.c
 CFLAGS = -Wall -Wextra
 
 example: example.c other.c
-    $(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 ```
 
 ---
@@ -179,7 +179,7 @@ CFLAGS = -Wall -Wextra
 all: example
 
 clean:
-    $(RM) example
+	$(RM) example
 
 example: example.c other.c
 ```
@@ -202,13 +202,13 @@ Pattern matching example:
 # …
 
 %.html: %.md
-    $(PAN) $(PANFLAGS) $(PANFLAGS_DOC) -o $@ $^
+	$(PAN) $(PANFLAGS) $(PANFLAGS_DOC) -o $@ $^
 
 %.pdf: %.html
-    $(HTMLTOPDF) $(HTMLTOPDFFLAGS) --print-to-pdf=$@ "file://$(WD)/$<?print-pdf"
+	$(HTMLTOPDF) $(HTMLTOPDFFLAGS) --print-to-pdf=$@ "file://$(WD)/$<?print-pdf"
 
 %_slides.html: %_slides.md
-    $(PAN) $(PANFLAGS) $(PANFLAGS_SLIDES) -o $@ $^
+	$(PAN) $(PANFLAGS) $(PANFLAGS_SLIDES) -o $@ $^
 ```
 
 ---
