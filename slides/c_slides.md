@@ -417,9 +417,10 @@ bool do_something(void)
 
     result = do_something_with_resources(resource_a, resource_b, resource_c);
 
-    error3: release_resource_c(resource_c); // only allowed if acquired
-    error2: release_resource_b(resource_b);
-    error1: release_resource_a(resource_a);
+            release_resource_c(resource_c); // only allowed if acquired
+    error3: release_resource_b(resource_b); // only allowed if acquired
+    error2: release_resource_a(resource_a); // only allowed if acquired
+    error1:
 
     return result;
 }
