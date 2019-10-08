@@ -293,7 +293,7 @@ buf[256] = 42;
 - `continue`
 - `step` / `next` / `finish`
 - `print` / `x`
-- `list` / `where`
+- `list`
 - `info locals` / `info args`
 - `help` / `quit`
 
