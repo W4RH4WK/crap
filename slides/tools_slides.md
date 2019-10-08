@@ -179,7 +179,7 @@ CFLAGS = -Wall -Wextra
 all: example
 
 clean:
-	$(RM) example
+	$(RM) example example.o other.o
 
 example: example.c other.c
 ```
@@ -191,7 +191,7 @@ cc -Wall -Wextra   -c -o other.o other.c
 cc   example.o other.o   -o example
 
 $ make clean
-rm -f example
+rm -f example example.o other.o
 ```
 
 ---
