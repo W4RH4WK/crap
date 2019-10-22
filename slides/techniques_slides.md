@@ -84,6 +84,10 @@ Core idea behind *agile* software development.
 
 ---
 
+![](images/overcome.jpg)
+
+---
+
 - Update problem description
 - Make changes to your solution specification
 - Update your management plan accordingly
@@ -189,7 +193,6 @@ double xfb(int a, int b, double pre); // 🤔
 
 - Again, use the correct type
 - Meaningful name, don't abbreviate (e.g. `wnd` vs. `window`)
-  - Conventional abbreviations are ok (e.g. `num_users`)
 - `const` by default
 - Always initialise
 - Limit their scope
