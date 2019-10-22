@@ -332,8 +332,8 @@ double Engine::updateTimestamp()
 {
     const auto now = Clock::now();
 
-    auto delta = now - m_timestampe;
-    m_timestampe = now;
+    auto delta = now - m_timestamp;
+    m_timestamp = now;
 
     // cap delta to 100 milliseconds
     delta = std::min<Clock::duration>(delta, 50ms);
@@ -351,8 +351,8 @@ double Engine::updateTimestamp()
 {
     const auto now = Clock::now();
 
-    auto delta = now - m_timestampe;
-    m_timestampe = now;
+    auto delta = now - m_timestamp;
+    m_timestamp = now;
 
     // Large time deltas can cause issues with physics simulations. Capping it
     // here affects the whole simulation (not just physics) equally.
