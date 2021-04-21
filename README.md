@@ -1,4 +1,4 @@
-# C Recap and co
+# C Recap And Co
 
 - [C recap](slides/c_slides.md)
 - [Git](slides/git_slides.md)
